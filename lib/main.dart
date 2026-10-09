@@ -2,6 +2,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:exam_5_128/screens/login_screen.dart';
+import 'package:exam_5_128/theme/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,8 +19,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'SOCAlert',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.redAccent),
         useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.accent),
+        scaffoldBackgroundColor: AppColors.background,
       ),
       home: const LoginScreen(),
     );
